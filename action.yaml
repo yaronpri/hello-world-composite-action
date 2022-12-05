@@ -12,6 +12,8 @@ outputs:
 runs:
   using: "composite"
   steps:
+    - run: ls -l
+      shell: bash
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
     - id: random-number-generator
@@ -20,6 +22,8 @@ runs:
     - run: echo "${{ github.action_path }}" >> $GITHUB_PATH
       shell: bash
     - run: goodbye.sh
+      shell: bash
+    - run: ls -l
       shell: bash
     - run: python example.py
       shell: bash
