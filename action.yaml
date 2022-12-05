@@ -21,3 +21,7 @@ runs:
       shell: bash
     - run: goodbye.sh
       shell: bash
+    - run: python example.py
+      shell: bash
+    - run: example.py
+      shell: python
