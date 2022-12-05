@@ -12,7 +12,11 @@ outputs:
 runs:
   using: "composite"
   steps:
-    - run: echo ${{ github.action_path }}
+    - run: pwd
+      shell: bash
+    - run: echo Action Path = ${{ github.action_path }}
+      shell: bash
+    - run: ls ${{ github.action_path }}
       shell: bash
     - run: echo Hello ${{ inputs.who-to-greet }}.
       shell: bash
