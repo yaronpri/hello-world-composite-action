@@ -29,7 +29,5 @@ runs:
       shell: bash
     - run: ls -l
       shell: bash
-    - run: python example.py
+    - run: python ${{ github.action_path }}/example.py
       shell: bash
-    - run: example.py
-      shell: python
